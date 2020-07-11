@@ -55,9 +55,47 @@ public class Main {
 			System.out.println("You got the high score!");
 		}
 
-		int secondTopScore = 81;
-		if(topScore > secondTopScore && topScore < 100) {
+		int secondTopScore = 95;
+		if((topScore > secondTopScore) && (topScore < 100)) {
 			System.out.println("Greater than secondTopScore and less than 100");
+		}
+
+		if((topScore > 90) || (secondTopScore <= 90)) {
+			System.out.println("Either or both of the conditions are true");
+		}
+
+		int newValue = 50;
+		if (newValue == 50) {
+			System.out.println("This is true");
+		}
+
+		boolean isCar = false;
+		if(isCar) {
+			System.out.println("Definitely a car");
+		}
+
+		isCar = true;
+		boolean wasCar = isCar ? true : false;
+		if(wasCar) {
+			System.out.println("wasCar is true");
+		}
+
+		// 1. Create a double variable with a value of 20.00
+		// 2. Create a second variable of type double wth the value 80.00
+		// 3. Add both numbers together and multiply by 100.00
+		// 4. Use the remainder operator to figure out what the remainder from the result of the operation in step 3 and 40.00. We used the modulus or remainder operator on ints in the course, but we can also use it on a double.
+    	// 5. Create a boolean variable that assigns the value true if the remainder in #4 is 0 or false if its not zero.
+		// 6. Output the boolean variable
+		// 7. Write an if-then statement that displays a message "Got some remainder" if the boolean in step 5 is not true. Don't be surprised if you see output for this step, where you might expect it not to show. I'll explain it in my solution.
+
+		double firstDouble = 20.00d;
+		double secondDouble = 80.00d;
+		firstDouble = (firstDouble + secondDouble) * 100.00d;
+		firstDouble %= 40.00d;
+		boolean challengeResult = firstDouble == 0;
+		System.out.println("result: " + challengeResult);
+		if(!challengeResult) {
+			System.out.println("Got some remainder");
 		}
     }
 }
